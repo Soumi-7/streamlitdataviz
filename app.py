@@ -56,8 +56,8 @@ def load_and_clean(csv_path: str, csv_path2: str = None):
     return df1, num_cols, df3
 
 
-path1 = "/Users/soumi/Desktop/grad/msba325/asst1/92e594ab51adfccc49b1e9bd02bb4708_20241020_022106.csv"
-path2 = "/Users/soumi/Desktop/grad/msba325/asst1/a9c0cb61966b5c9fa47a4a9bbd375039_20240906_142928.csv"
+path1 = "92e594ab51adfccc49b1e9bd02bb4708_20241020_022106.csv"
+path2 = "a9c0cb61966b5c9fa47a4a9bbd375039_20240906_142928.csv"
 df1, num_cols, df3 = load_and_clean(path1, path2)
 
 
