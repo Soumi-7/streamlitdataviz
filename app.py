@@ -4,10 +4,18 @@ import numpy as np
 import plotly.express as px
 from urllib.parse import urlparse
 
+st.markdown(
+    """
+**Page overview.** This page highlights two related views:
+1) where documented migrant communities are concentrated by district, and  
+2) how the exchange rate evolved over time.  
 
-st.set_page_config(page_title="Hello", page_icon="👋", layout="centered")
-st.title("Hello, Streamlit! 👋")
-st.write("If you can see this in the browser, Streamlit is working.")
+"""
+)
+
+st.set_page_config(page_title="MSBA 325 - Streamlit Demo",layout="centered")
+st.title("MSBA 325 - Streamlit Demo")
+st.write("by Haytham Duwaji")
 
 @st.cache_data(show_spinner=False)
 def load_and_clean(csv_path: str, csv_path2: str = None):
@@ -71,12 +79,22 @@ with tab1:
         top,
         x="District",
         y="Total migrants",
-        title=f"Top {top_n} Districts by Selected Migrants",
+        title=f"Top {top_n} Districts by Total Migrants",
         labels={"Total migrants": "Total migrants"},
     )
     fig1.update_layout(xaxis_title=None)
     st.plotly_chart(fig1, use_container_width=True)
-
+    st.markdown(
+            f"""Beirut completely dominates, with 
+    well over 120,000 migrants. 
+    The second place Matn District doesn’t even come close 
+    it’s barely a fraction of Beirut’s number. 
+    This tells us that Beirut is by far the main hub for migrants, 
+    likely because of its jobs, housing, and services. 
+    After Beirut, the distribution flattens out 
+    all other districts have much smaller totals."""
+        )
+    
 # ---- Tab 2: Interactive time-series
 with tab2:
     st.subheader("Exchange Rate — Year range only")
@@ -101,5 +119,9 @@ with tab2:
         title="Lebanese Pound per USD (raw)"
     )
 
-
+    st.markdown(
+        f"""The exchange rate of the Lebanese Pound (LBP) to the US Dollar (USD) has seen significant fluctuations over the years. 
+        Notably, there was a sharp increase in the exchange rate around 2019-2020, indicating a rapid depreciation of the LBP against the USD. 
+        This trend reflects the economic challenges faced by Lebanon during this period."""
+    )
     st.plotly_chart(fig, use_container_width=True)
