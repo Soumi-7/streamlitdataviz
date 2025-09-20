@@ -116,7 +116,7 @@ with tab2:
     # Plot raw values
     fig = px.line(
         ts_f, x="Year", y="Value", markers=True,
-        title="Lebanese Pound per USD (raw)"
+        title="Lebanese Pound per USD"
     )
 
     st.plotly_chart(fig, use_container_width=True)
