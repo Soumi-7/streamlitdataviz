@@ -119,9 +119,10 @@ with tab2:
         title="Lebanese Pound per USD (raw)"
     )
 
+    st.plotly_chart(fig, use_container_width=True)
+    
     st.markdown(
         f"""The exchange rate of the Lebanese Pound (LBP) to the US Dollar (USD) has seen significant fluctuations over the years. 
         Notably, there was a sharp increase in the exchange rate around 2019-2020, indicating a rapid depreciation of the LBP against the USD. 
         This trend reflects the economic challenges faced by Lebanon during this period."""
     )
-    st.plotly_chart(fig, use_container_width=True)
