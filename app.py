@@ -123,7 +123,7 @@ with tab2:
     
     st.markdown(
         f"""
-        There are three key phases: after the civil war in 1991-1992, speculation, weak reserves, 
+        There are three key phases: after the civil war in 1991-1992 lebanon's weak reserves, 
         and inflation pushed the rate to about 1,712 LBP per dollar; from 1997 to 2019 it stabilized at roughly 1,500; 
-        then in 2019-2020, the financial crisis - debt, corruption, frozen deposits, and lost confidence - sent the pound into free fall."""
+        then in 2019-2020, we can see an increase in the rate due to the economic crisis, that occurred in Lebanon."""
     )
